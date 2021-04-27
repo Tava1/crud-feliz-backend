@@ -24,6 +24,7 @@ export default class CreatePeople1619498988271 implements MigrationInterface {
           {
             name: 'cpf',
             type: 'char(11)',
+            isUnique: true,
           },
           {
             name: 'marital_status',
