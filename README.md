@@ -1,8 +1,7 @@
 # Um CRUD Muito feliz
-Este projeto tem como objetivo prover uma API back-end que será consumida por um [front-end](https://github.com/Tava1/crud-feliz-frontend) totalmente construído com React :atom_symbol:. 
+Este projeto tem como objetivo prover uma API back-end que será consumida por um [front-end](https://github.com/Tava1/crud-feliz-frontend) totalmente construído em React :atom_symbol:. 
 
 ## Acesse e confira o repositório [front-end](https://github.com/Tava1/crud-feliz-frontend)
-
 [https://github.com/Tava1/crud-feliz-frontend](https://github.com/Tava1/crud-feliz-frontend)
 
 ## Visite o site (EM BREVE) :link:
@@ -48,10 +47,36 @@ Para realizar o build do projeto.
 yarn build
 ```
 
+## Rotas
+
+Confira o aquivo de rotas ```src/routes/people.routes.ts```
+
+### Parâmetros
+```:id``` - Utiliza-se ```uuid``` gerado apartir do banco de dados para identificar uma pessoa.
+
+Listar todas pessoas
+- ```GET:``` /people
+
+Detalhar uma pessoa
+- ```GET:``` /people/:id
+
+Nova pessoa
+- ```POST:``` /people/
+
+Atualizar uma pessoa
+- ```PUT:``` /people/:id
+
+Deletar uma pessoa
+- ```DELETE:``` /people/:id
+
 ## Estrutura de diretórios do projeto
 
-### src
-Este diretório armazena todo o código desenvolvido ou seja, lógica da aplicação, rotas, serviços e etc.
+```/src``` - Este diretório armazena todo o código desenvolvido ou seja, lógica da aplicação, rotas, models e etc.
 
-...
+```/src/controller``` - Lógica do CRUD e conexão com a repository para persistência no banco de dados. 
 
+```/src/database``` - Conexão com o banco de dados e armazenamento de todas as migrations.
+
+```/src/models``` - Modelos e entidades.
+
+```/src/routes``` - Armazena todas as Rotas disponíveis na aplicação.
