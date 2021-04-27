@@ -90,7 +90,7 @@ const peopleController = {
 
   async update(request: Request, response: Response): Promise<People | any> {
     const { id } = request.params;
-    const { name, age, marital_status, state, city } = request.body;
+    const { name, age, cpf, marital_status, state, city } = request.body;
 
     try {
       const result = await getRepository(People)
@@ -99,6 +99,7 @@ const peopleController = {
         .set({
           name,
           age,
+          cpf,
           marital_status,
           state,
           city,
